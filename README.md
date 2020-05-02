@@ -1,5 +1,7 @@
 # StarredGitRepos
 
+Angular application to view and see information about my starred repositories.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
 ## Development server
