@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RepoService } from '../../services/repo.service';
+import { Repo } from '../../repo';
 
 @Component({
   selector: 'app-starred-repo-list',
@@ -8,12 +9,12 @@ import { RepoService } from '../../services/repo.service';
   styleUrls: ['./starred-repo-list.component.css']
 })
 export class StarredRepoListComponent implements OnInit {
-  repos: String[];
+  repos: Repo[];
 
   constructor(private router: Router, private repoService: RepoService) { }
 
   ngOnInit() {
-    this.repos = this.repoService.getRepoNames();
+    this.repos = this.repoService.getRepos();
   }
 
 }
