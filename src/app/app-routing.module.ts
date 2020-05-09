@@ -10,8 +10,7 @@ const routes: Routes = [
   {
     path: 'starred-repo-list',
     loadChildren: './components/starred-repo-list/starred-repo-list.module#StarredRepoListModule'
-  }
-  // TODO: Add detail route
+  },
 ];
 
 @NgModule({
