@@ -16,5 +16,4 @@ export class StarredRepoListComponent implements OnInit {
   ngOnInit() {
     this.repos = this.repoService.getRepos();
   }
-
 }
