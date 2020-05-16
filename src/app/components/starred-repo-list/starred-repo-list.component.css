@@ -14,6 +14,10 @@
           0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+.RepoName a {
+    text-decoration: none;
+}
+
 #ListArea {
     text-align: center;
 }
