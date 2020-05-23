@@ -9,7 +9,7 @@ const routes: Routes = [
     component: StarredRepoListComponent
   },
   {
-    path: 'repos/:repoName', component: RepoDetailComponent
+    path: 'repos/:repoId', component: RepoDetailComponent
   }
 ];
 
