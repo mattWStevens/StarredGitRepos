@@ -14,8 +14,26 @@
           0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+.RepoName:hover {
+    background-color: rgba(0, 0, 0, 0.2);;
+    height: 55px;
+    width: 75%;
+    display: inline-block;
+    padding-top: 35px;
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+          0 0 0 2px rgb(255, 255, 255),
+          0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
 .RepoName a {
     text-decoration: none;
+    color: white;
+    font-size: 24px;
 }
 
 #ListArea {
