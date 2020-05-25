@@ -1,3 +1,5 @@
 <div id="ListArea">
-  <div class="RepoName swing" *ngFor="let repo of repos">{{ repo.name }}</div>
+  <div class="RepoName swing" *ngFor="let repo of repos; index as repoId">
+    <a [routerLink]="['repos/', repoId]">{{ repo.name }}</a>
+  </div>
 </div>
