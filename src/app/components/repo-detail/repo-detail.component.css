@@ -2,8 +2,16 @@ h2 {
     font-size: 48px;
     color: black;
     text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 p {
     font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#VisitRepository {
+    text-align: center;
 }
