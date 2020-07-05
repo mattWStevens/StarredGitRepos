@@ -26,6 +26,6 @@ export class StarredRepoListComponent implements OnInit {
       } //TODO: Star other repos and try again to see if maps correctly, if it does, then begin replacing other implementation
         with the actual observable.
     });*/
-    console.log(this.repos);
+    console.log(this.realRepos$);
   }
 }
