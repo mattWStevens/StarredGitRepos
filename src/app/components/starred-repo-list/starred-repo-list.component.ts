@@ -19,13 +19,12 @@ export class StarredRepoListComponent implements OnInit {
 
   ngOnInit() {
     this.repos = this.repoService.getRepos();
-    this.realRepos$ = this.http.get<RepoResponse[]>('https://api.github.com/users/mattWStevens/starred')
-    /*this.realRepos$.subscribe(realrepos => {
+    this.realRepos$ = this.http.get<RepoResponse[]>('https://api.github.com/users/mattWStevens/starred');
+    this.realRepos$.subscribe(realrepos => {
       for (var i = 0; i < 6; i++) {
         this.repos[i] = realrepos[i];
       } //TODO: Star other repos and try again to see if maps correctly, if it does, then begin replacing other implementation
-        with the actual observable.
-    });*/
-    console.log(this.realRepos$);
+    });
+    console.log(this.repos);
   }
 }
