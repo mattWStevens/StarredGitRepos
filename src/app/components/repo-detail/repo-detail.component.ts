@@ -16,6 +16,8 @@ export class RepoDetailComponent implements OnInit {
 
   ngOnInit() {
     const repoList: Repo[] = this.repoService.getRepos();
+    //TODO: Make API pass in the github link or name into this class instead of repoId and make specific call here
+    // for that specific repo.
 
     this.activatedRoute.paramMap.subscribe(params => {
       this.repo = repoList[+params.get('repoId')];

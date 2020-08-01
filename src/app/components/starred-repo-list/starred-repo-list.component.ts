@@ -12,19 +12,12 @@ import { RepoResponse } from 'src/app/repo-response';
   styleUrls: ['./starred-repo-list.component.css']
 })
 export class StarredRepoListComponent implements OnInit {
-  repos: Repo[];
   realRepos$: Observable<RepoResponse[]>;
 
   constructor(private router: Router, private repoService: RepoService, private http: HttpClient) { }
 
   ngOnInit() {
-    this.repos = this.repoService.getRepos();
     this.realRepos$ = this.http.get<RepoResponse[]>('https://api.github.com/users/mattWStevens/starred');
-    this.realRepos$.subscribe(realrepos => {
-      for (var i = 0; i < 6; i++) {
-        this.repos[i] = realrepos[i];
-      } //TODO: Star other repos and try again to see if maps correctly, if it does, then begin replacing other implementation
-    });
-    console.log(this.repos);
+    //TODO: Move http get to service get method so can call that and assign to observable***
   }
 }
