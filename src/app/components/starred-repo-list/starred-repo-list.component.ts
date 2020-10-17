@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { RepoService } from '../../services/repo.service';
-import { Repo } from '../../repo';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { RepoResponse } from 'src/app/repo-response';
 
 @Component({
   selector: 'app-starred-repo-list',
@@ -9,11 +9,11 @@ import { Repo } from '../../repo';
   styleUrls: ['./starred-repo-list.component.css']
 })
 export class StarredRepoListComponent implements OnInit {
-  repos: Repo[];
+  realRepos$: Observable<RepoResponse[]>;
 
-  constructor(private router: Router, private repoService: RepoService) { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.repos = this.repoService.getRepos();
+    this.realRepos$ = this.http.get<RepoResponse[]>('https://api.github.com/users/mattWStevens/starred');
   }
 }
